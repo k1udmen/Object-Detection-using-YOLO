@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project-specific outputs
+ss_folder/*
+runs/*
+weights/*.pt
+
+# Local configs
+config/config.ini
+
+# Logs
+*.log

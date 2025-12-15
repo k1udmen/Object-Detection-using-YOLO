@@ -1,0 +1,72 @@
+
+# json data to send 
+{
+  "requestId": null,
+  "appCode": null,
+  "valfQuantity": 0,
+  "transactionDate": "0001-01-01T00:00:00",
+  "isCreated": false,
+  "isPrinted": false,
+  "selfNo": 0
+}
+ # send request first 1.
+http://localhost:9999
+return {"Payload":"VA2504240027","Success":true,"Message":""}
+store payload value
+
+# post 
+http://localhost:9999
+
+
+#http://localhost:9999
+{
+    "Payload": [
+        {
+            "Id": 5,
+            "RequestId": "string",
+            "AppCode": "string",
+            "ValfQuantity1": 0,
+            "ValfQuantity2": 0,
+            "CreateDate": "2025-04-17T15:24:20+03:00",
+            "Printed": false,
+            "Status": false
+        },
+        {
+            "Id": 4,
+            "RequestId": "VA2504170025",
+            "AppCode": "VA001", # valf saymanın kodu damacanada farklı
+            "ValfQuantity1": 50, # kutunun 1. katı
+            "ValfQuantity2": 0, # kutunun 2. katı beyaz kağıttan sonra
+            "CreateDate": "2025-04-17T14:52:46+03:00", # data gönderme tarihim
+            "Printed": false, # 1.kat 50 gönderdim 2.katda 50 olduğunda status ile beraber print olayı 1
+            "Status": false # <50  return sıfır 0 sadece ==50 return  bir 1
+        },
+        {
+            "Id": 1,
+            "RequestId": "VA2504170024",
+            "AppCode": "VA011",
+            "ValfQuantity1": 10,
+            "ValfQuantity2": 10,
+            "CreateDate": "2025-04-17T10:23:57+03:00",
+            "FinishDate": "2025-04-17T10:24:01+03:00",
+            "Printed": true,
+            "Status": true
+        }
+    ],
+    "Success": true,
+    "Message": ""
+}
+
+
+
+# data model
+public class ValfDto
+   {
+       public string RequestId { get; set; }
+       public string AppCode { get; set; }
+       public int ValfQuantity { get; set; }
+       public DateTime TransactionDate { get; set; }
+       public bool IsCreated { get; set; }
+       public bool IsPrinted { get; set; }
+       public int SelfNo { get; set; }
+   }
