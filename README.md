@@ -1,8 +1,8 @@
-# Valf Analitik – Real-time Valve Detection & Counting (YOLO + FastAPI)
+# Real-time Detection & Counting (YOLO + FastAPI)
 
-This project runs a real-time valve detection and counting pipeline using a trained YOLO model.
-It captures frames from a camera/video source, crops a fixed ROI, performs inference, counts valves,
-optionally saves evidence screenshots, and sends results to an external API.
+This repository contains a computer vision project developed during an industrial internship. 
+The goal of the project was to design a real-time system for detecting and counting industrial valves from live video streams under different environmental conditions
+It captures frames from a camera/video source, crops a fixed ROI, performs inference, counts valves, saves screenshots, and sends results to an API.
 
 ## Project Structure
 - `main.py` – FastAPI service and main runtime loop
