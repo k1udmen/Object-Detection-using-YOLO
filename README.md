@@ -4,6 +4,11 @@ This repository contains a computer vision project developed during an industria
 The goal of the project was to design a real-time system for detecting and counting industrial valves from live video streams under different environmental conditions
 It captures frames from a camera/video source, crops a fixed ROI, performs inference, counts valves, saves screenshots, and sends results to an API.
 
+## Important Note
+Some file paths in the code are currently defined using local Windows paths.
+Before running the project on a different machine, please update the paths (model path, camera source,and output directories) according to your  setup.
+
+
 ## Project Structure
 - `main.py` – FastAPI service and main runtime loop
 - `predict.py` – ROI crop, preprocess, YOLO inference, postprocess, counting
